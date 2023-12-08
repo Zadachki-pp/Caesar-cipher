@@ -32,7 +32,7 @@ namespace caesar_cipher {
         std::random_device random_device;
         std::mt19937 generator(random_device());
         generator.seed(seed);
-        std::uniform_int_distribution<> distribution(0, DICTIONARY.length() - 1);
+        std::uniform_int_distribution<unsigned> distribution(0, DICTIONARY.length() - 1);
 
         for (int i = 0; i < text.length();) {
             auto random_value = distribution(generator);
@@ -55,7 +55,7 @@ namespace caesar_cipher {
         std::random_device random_device;
         std::mt19937 generator(random_device());
         generator.seed(seed);
-        std::uniform_int_distribution<> distribution(0, DICTIONARY.length() - 1);
+        std::uniform_int_distribution<unsigned> distribution(0, DICTIONARY.length() - 1);
 
         for (auto i: text) {
             auto random_value = distribution(generator);
